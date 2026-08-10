@@ -14,7 +14,7 @@
 <!-- Display-serif. Virker uden nettet også — falder tilbage til Georgia. -->
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;800&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@900&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="stil.css">
 </head>
 <body>
@@ -33,23 +33,30 @@
 
   <!-- ===================== FORSIDE ===================== -->
   <div class="hero wrap">
-    <div class="hero-grid">
-      <figure>
-        <img src="billeder/estrid.jpg" alt="Estrid Pagels">
-      </figure>
-      <div>
-        <p class="eyebrow">Borger i Danmark</p>
-        <h1>Estrid Pagels</h1>
-        <a class="arrow" href="#kontakt">Skriv til Estrid &rarr;</a>
+    <div class="hero-inner">
+      <div class="hero-grid">
+        <figure>
+          <img src="billeder/estrid.jpg" alt="Estrid Pagels">
+          <!-- Skriv fotografens navn her, eller slet linjen -->
+          <figcaption>&nbsp;</figcaption>
+        </figure>
+        <div>
+          <p class="eyebrow">Borger i Danmark</p>
+          <!-- H1 kan skiftes ud med en kort sætning, hvis du hellere vil det -->
+          <h1>Estrid Pagels</h1>
+          <p class="lead">
+            Donorbarn er ikke udgivet endnu. Den ligger her, når den er klar til at blive læst.
+          </p>
+          <a class="arrow" href="donorbarn.html">Læs om Donorbarn &rarr;</a>
+        </div>
       </div>
     </div>
   </div>
 
   <!-- ===================== KONTAKT ===================== -->
-  <section id="kontakt">
+  <section class="kontakt" id="kontakt">
     <div class="wrap">
       <h2>Kontakt</h2>
-      <p class="sub">Skriv endelig — jeg vender tilbage, når jeg kan.</p>
 
       <div class="kontakt-grid">
         <!--
@@ -66,19 +73,17 @@
           <input type="hidden" name="from_name" value="estridpagels.dk">
           <input type="hidden" name="redirect" value="https://estridpagels.dk/?tak=1">
 
-          <div class="field-grid">
-            <p class="field">
-              <label for="navn">Dit navn</label>
-              <input id="navn" name="navn" type="text" required>
-            </p>
-            <p class="field">
-              <label for="mail">Din e-mail</label>
-              <input id="mail" name="email" type="email" required>
-            </p>
-          </div>
+          <p class="field">
+            <label for="navn">Dit navn</label>
+            <input id="navn" name="navn" type="text" required>
+          </p>
+          <p class="field">
+            <label for="mail">Din e-mail</label>
+            <input id="mail" name="email" type="email" required>
+          </p>
           <p class="field">
             <label for="besked">Din besked</label>
-            <textarea id="besked" name="besked" rows="6" required></textarea>
+            <textarea id="besked" name="besked" rows="5" required></textarea>
           </p>
           <!-- Fælde for spam-robotter. Skjult for mennesker — lad den stå tom. -->
           <p class="honeypot" aria-hidden="true"><label>Website<input name="botcheck" type="checkbox" tabindex="-1"></label></p>
@@ -115,7 +120,7 @@
     if(!el) return;
     if(p.has('tak')){
       el.textContent = 'Tak for din besked — jeg vender tilbage, når jeg kan.';
-      el.className = 'besked-status ok'; el.hidden = false;
+      el.hidden = false;
     }
   })();
 

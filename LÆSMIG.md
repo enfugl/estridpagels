@@ -2,6 +2,17 @@
 
 En lille statisk side til Estrid — to sider, ingen database, intet CMS.
 
+## Om designet
+
+Formen er bevidst lagt tæt op ad **mariehost.dk**: fast menu på 57 px, hero i to lige
+spalter à 456 px med 48 px imellem, foto til venstre i forholdet 456:578, og til højre
+spærret eyebrow, Playfair Display i vægt 900 på 60/75 px og grå brødtekst.
+
+Det er *formen*, der er lånt. Kode, tekst og billeder er vores egne — der er ikke
+kopieret filer, formuleringer eller fotos fra den side. Marie Høst er en navngiven
+dansk journalist, så slægtskabet er værd at være bevidst om, hvis siden en dag skal
+have sit eget udtryk.
+
 ## Filer
 
 ```
