@@ -28,6 +28,12 @@ estridpagels-site/
 Rettelser i `stil.css` slår igennem på begge sider. Åbn filerne i en teksteditor
 (VS Code, Notepad++ — ikke Word).
 
+## Vigtigt ved ændringer i stil.css eller sider.js
+
+Siderne henter dem med et versionsnummer: `stil.css?v=2`. **Tæl det op til `?v=3` i alle
+fire HTML-filer, når du retter i stilarket eller scriptet** — ellers bliver den gamle
+udgave hængende i folks browsere, og ændringen ser ud til ikke at virke.
+
 ## Sådan opdaterer du siden
 
 ```bash
