@@ -79,7 +79,9 @@ header{
 .hero-inner{width:100%}
 .hero-grid{display:grid; grid-template-columns:1fr 1fr; gap:48px; align-items:center}
 figure{margin:0}
-figure img{aspect-ratio:456/578; object-fit:cover; object-position:center 20%; width:100%}
+/* height:auto er nødvendig — ellers slår height-attributten på <img> igennem
+   som typografi og sætter beskæringen ud af kraft. */
+figure img{aspect-ratio:456/578; object-fit:cover; object-position:center 20%; width:100%; height:auto}
 figcaption{margin-top:8px; text-align:right; font-size:11.2px; color:#808080}
 
 .eyebrow{
