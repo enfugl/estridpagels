@@ -47,7 +47,15 @@ header{
 }
 
 /* ---------------- Forside ---------------- */
-.hero{padding-top:140px; padding-bottom:150px}
+.hero{padding-top:120px; padding-bottom:130px}
+.hero-grid{display:grid; grid-template-columns:minmax(0,420px) 1fr; gap:76px; align-items:center}
+@media (max-width:900px){
+  .hero{padding-top:64px; padding-bottom:76px}
+  .hero-grid{grid-template-columns:1fr; gap:44px}
+  .hero-grid figure{max-width:340px}
+}
+figure{margin:0}
+figure img{aspect-ratio:4/5; object-fit:cover; object-position:center 22%; width:100%}
 .eyebrow{
   margin:0 0 26px; font-size:13px; letter-spacing:.14em;
   text-transform:uppercase; color:var(--faint);
@@ -63,7 +71,6 @@ h1{
   border-bottom:1px solid var(--ink); padding-bottom:3px;
 }
 .arrow:hover{opacity:.6}
-@media (max-width:900px){ .hero{padding-top:76px; padding-bottom:84px} }
 
 /* ---------------- Sektioner ---------------- */
 section{padding-top:92px; padding-bottom:92px; border-top:1px solid var(--line)}
