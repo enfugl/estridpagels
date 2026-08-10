@@ -4,9 +4,9 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Estrid Pagels</title>
-<meta name="description" content="Estrid Pagels — [kort beskrivelse, fx: rådgiver, oplægsholder og moderator].">
+<meta name="description" content="Estrid Pagels — borger i Danmark.">
 <meta property="og:title" content="Estrid Pagels">
-<meta property="og:description" content="[kort beskrivelse]">
+<meta property="og:description" content="Borger i Danmark.">
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://estridpagels.dk/">
 <meta property="og:locale" content="da_DK">
@@ -14,212 +14,18 @@
 <!-- Display-serif. Virker uden nettet også — falder tilbage til Georgia. -->
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;800;900&display=swap" rel="stylesheet">
-
-<style>
-:root{
-  --bg:#ffffff;
-  --ink:#101820;          /* næsten sort med et strejf blå */
-  --muted:#6a7078;        /* brødtekst / menu */
-  --faint:#9aa1a9;        /* eyebrow, billedtekst */
-  --line:#e6e7e9;
-  --display:"Playfair Display",Georgia,"Times New Roman",serif;
-  --sans:-apple-system,BlinkMacSystemFont,"Segoe UI",Inter,Roboto,"Helvetica Neue",Arial,sans-serif;
-  --wrap:1280px;   /* indholdskolonnen — centreret på siden */
-}
-@media (prefers-color-scheme: dark){
-  :root{ --bg:#0e1116; --ink:#f3f5f7; --muted:#a2a9b2; --faint:#767d86; --line:#262b33; }
-}
-:root[data-theme="dark"]{ --bg:#0e1116; --ink:#f3f5f7; --muted:#a2a9b2; --faint:#767d86; --line:#262b33; }
-:root[data-theme="light"]{ --bg:#ffffff; --ink:#101820; --muted:#6a7078; --faint:#9aa1a9; --line:#e6e7e9; }
-
-*{box-sizing:border-box}
-html{scroll-behavior:smooth}
-body{
-  margin:0; background:var(--bg); color:var(--ink);
-  font-family:var(--sans); font-size:17px; line-height:1.6;
-  -webkit-font-smoothing:antialiased;
-}
-img{max-width:100%; display:block}
-.wrap{max-width:var(--wrap); margin:0 auto; padding-left:32px; padding-right:32px}
-@media (max-width:640px){ .wrap{padding-left:20px; padding-right:20px} }
-
-/* ---------------- Navigation ---------------- */
-header{
-  position:sticky; top:0; z-index:50; background:var(--bg);
-  border-bottom:1px solid var(--line);
-}
-.nav{display:flex; align-items:center; height:74px; gap:96px}
-.brand{
-  font-size:17px; font-weight:600; letter-spacing:-.01em;
-  text-decoration:none; color:var(--ink); white-space:nowrap;
-}
-.nav ul{display:flex; gap:38px; list-style:none; margin:0; padding:0; flex:1}
-.nav a{text-decoration:none; font-size:16px; color:var(--muted); transition:color .15s}
-.nav a:hover{color:var(--ink)}
-.nav .lang{font-size:14px; color:var(--muted); text-decoration:none; letter-spacing:.04em}
-@media (max-width:980px){ .nav{gap:28px} .nav ul{gap:22px} .nav a{font-size:14.5px} }
-@media (max-width:760px){
-  .nav{height:auto; flex-direction:column; align-items:flex-start; gap:10px; padding-top:16px; padding-bottom:16px}
-  .nav ul{flex-wrap:wrap; gap:16px}
-  .nav .lang{display:none}
-}
-
-/* ---------------- Forside ---------------- */
-.hero{padding-top:96px; padding-bottom:104px}
-.hero-grid{display:grid; grid-template-columns:1fr 1fr; gap:80px; align-items:center}
-figure{margin:0}
-/* Udskift .photo-ph med:  <img src="billeder/estrid.jpg" alt="Estrid Pagels"> */
-.photo-ph{
-  aspect-ratio:4/5; background:#e9eaec;
-  display:flex; align-items:center; justify-content:center;
-  font-family:var(--display); font-size:72px; color:#b9bcc0;
-}
-figcaption{margin-top:10px; text-align:right; font-size:13px; color:var(--faint)}
-
-.eyebrow{
-  margin:0 0 26px; font-size:13px; letter-spacing:.14em;
-  text-transform:uppercase; color:var(--faint);
-}
-h1{
-  font-family:var(--display); font-weight:800;
-  font-size:clamp(40px,5vw,74px); line-height:1.06; letter-spacing:-.015em;
-  margin:0 0 34px;
-}
-.lead{font-size:19px; line-height:1.65; color:var(--muted); margin:0 0 34px; max-width:30em}
-.arrow{
-  display:inline-block; font-size:16px; color:var(--ink); text-decoration:none;
-  border-bottom:1px solid var(--ink); padding-bottom:3px;
-}
-.arrow:hover{opacity:.6}
-@media (max-width:900px){
-  .hero{padding-top:56px; padding-bottom:64px}
-  .hero-grid{grid-template-columns:1fr; gap:44px}
-  figure{max-width:420px}
-}
-
-/* ---------------- Sektioner ---------------- */
-section{padding-top:96px; padding-bottom:96px; border-top:1px solid var(--line)}
-@media (max-width:900px){ section{padding-top:64px; padding-bottom:64px} }
-h2{
-  font-family:var(--display); font-weight:700;
-  font-size:clamp(30px,3.6vw,46px); line-height:1.15; letter-spacing:-.01em; margin:0 0 18px;
-}
-.sub{color:var(--muted); margin:0 0 52px; max-width:38em; font-size:18px}
-
-.split{display:grid; grid-template-columns:1fr 1fr; gap:80px}
-.split-top{align-items:start}
-@media (max-width:900px){ .split{grid-template-columns:1fr; gap:40px} }
-.split p{color:var(--muted); margin:0 0 20px}
-.prose h2{margin-top:0}
-.prose p{font-size:18px; line-height:1.7}
-.facts{list-style:none; margin:36px 0 0; padding:0}
-.facts li{padding:16px 0; border-top:1px solid var(--line); font-size:16px}
-.facts li:last-child{border-bottom:1px solid var(--line)}
-.facts b{
-  display:block; font-weight:600; font-size:12px; letter-spacing:.12em;
-  text-transform:uppercase; color:var(--faint); margin-bottom:4px;
-}
-
-/* Ydelser */
-.cards{display:grid; grid-template-columns:repeat(3,1fr); gap:56px}
-@media (max-width:900px){ .cards{grid-template-columns:1fr; gap:40px} }
-.card{border-top:2px solid var(--ink); padding-top:22px}
-.card h3{font-family:var(--display); font-weight:700; font-size:25px; margin:0 0 12px; letter-spacing:-.01em}
-.card p{margin:0; color:var(--muted); font-size:16.5px}
-
-/* Opgaver */
-.row{display:grid; grid-template-columns:120px 1fr; gap:32px; padding:26px 0; border-top:1px solid var(--line)}
-.row:last-child{border-bottom:1px solid var(--line)}
-.row .year{color:var(--faint); font-size:15px; letter-spacing:.06em}
-.row h3{margin:0 0 5px; font-size:19px; font-weight:600}
-.row p{margin:0; color:var(--muted); font-size:16.5px}
-@media (max-width:600px){ .row{grid-template-columns:1fr; gap:6px} }
-
-/* Citat */
-blockquote{
-  margin:0; font-family:var(--display); font-weight:700;
-  font-size:clamp(24px,3.2vw,38px); line-height:1.3; letter-spacing:-.01em; max-width:20em;
-}
-.cite{margin-top:26px; font-size:16px; color:var(--muted)}
-
-/* Kontakt */
-.kontakt-h{margin-bottom:64px}
-.rule{border:0; border-top:1px solid var(--line); margin:0 0 72px}
-.rule-soft{margin:30px 0}
-.kontakt-grid{display:grid; grid-template-columns:1fr 300px; gap:80px; align-items:start}
-@media (max-width:900px){ .kontakt-grid{grid-template-columns:1fr; gap:48px} .kontakt-h{margin-bottom:40px} .rule{margin-bottom:44px} }
-
-.field-grid{display:grid; grid-template-columns:1fr 1fr; gap:0 56px}
-@media (max-width:640px){ .field-grid{grid-template-columns:1fr} }
-.field{margin:0 0 40px}
-.field label{
-  display:block; font-size:13px; letter-spacing:.13em; text-transform:uppercase;
-  color:var(--faint); margin-bottom:14px;
-}
-.field input, .field select, .field textarea{
-  width:100%; font-family:inherit; font-size:17px; color:var(--ink);
-  background:transparent; border:0; border-bottom:1px solid var(--line);
-  padding:6px 0 10px; border-radius:0;
-}
-.field textarea{resize:vertical; line-height:1.6}
-.field input:focus, .field select:focus, .field textarea:focus{
-  outline:none; border-bottom-color:var(--ink);
-}
-.field ::placeholder{color:var(--faint)}
-.send{
-  font-family:inherit; font-size:16px; color:var(--ink); background:transparent;
-  border:1px solid var(--ink); padding:14px 34px; cursor:pointer; transition:.15s;
-}
-.send:hover{background:var(--ink); color:var(--bg)}
-.honeypot{position:absolute; left:-9999px; width:1px; height:1px; overflow:hidden}
-.besked-status{margin:22px 0 0; font-size:16px}
-.besked-status.ok{color:var(--ink)}
-.besked-status.fejl{color:#b3261e}
-
-.kontakt-aside .alabel{
-  margin:0 0 12px; font-size:13px; letter-spacing:.13em;
-  text-transform:uppercase; color:var(--faint);
-}
-.kontakt-aside .avalue{margin:0; font-size:17px}
-.kontakt-aside a{color:var(--ink); text-decoration:none}
-.kontakt-aside .alinks a{border-bottom:1px solid var(--ink); padding-bottom:2px}
-.kontakt-aside .alinks a:hover{opacity:.6}
-.alinks{list-style:none; margin:0; padding:0}
-.alinks li{margin-bottom:14px}
-
-footer{border-top:1px solid var(--line); padding-top:64px; padding-bottom:56px}
-.foot-grid{display:grid; grid-template-columns:1fr 1fr; gap:60px}
-@media (max-width:700px){ .foot-grid{grid-template-columns:1fr; gap:28px} }
-.foot-name{font-size:17px; font-weight:600; margin:0 0 6px}
-.foot-roles{margin:0; color:var(--muted); font-size:16px}
-.foot-links{list-style:none; margin:0; padding:0}
-.foot-links li{margin-bottom:10px}
-.foot-links a{color:var(--muted); text-decoration:none; font-size:16px}
-.foot-links a:hover{color:var(--ink)}
-.foot-bottom{
-  margin-top:52px; display:flex; justify-content:space-between; align-items:center;
-  gap:16px; flex-wrap:wrap; font-size:14px; color:var(--faint);
-}
-.theme-btn{
-  background:none; border:1px solid var(--line); color:var(--faint);
-  border-radius:999px; padding:6px 15px; font-size:13px; cursor:pointer; font-family:inherit;
-}
-.theme-btn:hover{border-color:var(--ink); color:var(--ink)}
-</style>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="stil.css">
 </head>
 <body>
 
 <header>
   <nav class="wrap nav">
-    <a class="brand" href="#top">Estrid Pagels</a>
+    <a class="brand" href="/">Estrid Pagels</a>
     <ul>
-      <li><a href="#om">Om Estrid</a></li>
-      <li><a href="#ydelser">[Ydelse]</a></li>
-      <li><a href="#opgaver">Opgaver</a></li>
+      <li><a href="donorbarn.html">Donorbarn</a></li>
       <li><a href="#kontakt">Kontakt</a></li>
     </ul>
-    <a class="lang" href="#" aria-label="English">EN</a>
   </nav>
 </header>
 
@@ -227,118 +33,27 @@ footer{border-top:1px solid var(--line); padding-top:64px; padding-bottom:56px}
 
   <!-- ===================== FORSIDE ===================== -->
   <div class="hero wrap">
-    <div class="hero-grid">
-      <figure>
-        <!-- Udskift linjen herunder med: <img src="billeder/estrid.jpg" alt="Estrid Pagels"> -->
-        <div class="photo-ph">EP</div>
-        <figcaption>Foto: [fotografens navn]</figcaption>
-      </figure>
-      <div>
-        <p class="eyebrow">[Titel 1] · [Titel 2] · [Titel 3]</p>
-        <h1>[Kort, skarp sætning om det du kan.]</h1>
-        <p class="lead">
-          [Tre-fire linjer: hvem du er, hvad du arbejder med, og hvad man får ud af
-          at arbejde sammen med dig. Skriv i tredje person — det læser mest professionelt.]
-        </p>
-        <a class="arrow" href="#om">Læs mere om Estrid &rarr;</a>
-      </div>
-    </div>
+    <p class="eyebrow">Borger i Danmark</p>
+    <h1>Estrid Pagels</h1>
+    <a class="arrow" href="#kontakt">Skriv til Estrid &rarr;</a>
   </div>
-
-  <!-- ===================== OM ===================== -->
-  <section id="om">
-    <div class="wrap">
-      <div class="split split-top">
-        <figure>
-          <!-- Udskift med: <img src="billeder/estrid-2.jpg" alt="Estrid Pagels"> -->
-          <div class="photo-ph">EP</div>
-          <figcaption>Foto: [fotografens navn]</figcaption>
-        </figure>
-        <div class="prose">
-          <h2>Om Estrid</h2>
-          <p>[Afsnit 1 — hvem du er og hvad du arbejder med. Samme tone som forsiden.]</p>
-          <p>[Afsnit 2 — hvad du laver i dag: stilling, projekter, hvor man møder dig.]</p>
-          <p>[Afsnit 3 — din baggrund: uddannelse og tidligere stillinger.]</p>
-          <p>[Afsnit 4 — det personlige: interesser, hvor du bor.]</p>
-          <ul class="facts">
-            <li><b>Base</b>[By]</li>
-            <li><b>Sprog</b>Dansk, engelsk</li>
-            <li><b>Fagområder</b>[Emne 1, emne 2, emne 3]</li>
-            <li><b>Uddannelse</b>[Uddannelse, sted]</li>
-          </ul>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- ===================== YDELSER ===================== -->
-  <section id="ydelser">
-    <div class="wrap">
-      <h2>Det kan jeg hjælpe med</h2>
-      <p class="sub">[Én linje om hvordan man typisk bruger dig.]</p>
-      <div class="cards">
-        <article class="card">
-          <h3>[Ydelse 1]</h3>
-          <p>[To-tre linjer om hvad det er, og hvad kunden får ud af det.]</p>
-        </article>
-        <article class="card">
-          <h3>[Ydelse 2]</h3>
-          <p>[To-tre linjer.]</p>
-        </article>
-        <article class="card">
-          <h3>[Ydelse 3]</h3>
-          <p>[To-tre linjer.]</p>
-        </article>
-      </div>
-    </div>
-  </section>
-
-  <!-- ===================== OPGAVER ===================== -->
-  <section id="opgaver">
-    <div class="wrap">
-      <h2>Udvalgte opgaver</h2>
-      <p class="sub">[Fx: Et udpluk af det jeg har lavet de seneste år.]</p>
-      <div>
-        <div class="row">
-          <div class="year">2026</div>
-          <div><h3>[Opgavens navn]</h3><p>[Kunde eller sted — hvad du gjorde, kort.]</p></div>
-        </div>
-        <div class="row">
-          <div class="year">2025</div>
-          <div><h3>[Opgavens navn]</h3><p>[Kunde eller sted — hvad du gjorde, kort.]</p></div>
-        </div>
-        <div class="row">
-          <div class="year">2024</div>
-          <div><h3>[Opgavens navn]</h3><p>[Kunde eller sted — hvad du gjorde, kort.]</p></div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- ===================== CITAT ===================== -->
-  <section>
-    <div class="wrap">
-      <blockquote>„[En kort anbefaling fra en kunde eller samarbejdspartner.]”</blockquote>
-      <p class="cite">— [Navn], [titel], [organisation]</p>
-    </div>
-  </section>
 
   <!-- ===================== KONTAKT ===================== -->
   <section id="kontakt">
     <div class="wrap">
-      <h2 class="kontakt-h">Kontakt</h2>
-      <hr class="rule">
+      <h2>Kontakt</h2>
+      <p class="sub">Skriv endelig — jeg vender tilbage, når jeg kan.</p>
 
       <div class="kontakt-grid">
         <!--
           Formularen sender via Web3Forms — gratis, og kræver ingen server.
           Sådan gør du:
-          1. Gå på web3forms.com, indtast Estrids e-mail, få en access key på mail
+          1. Gå på web3forms.com, indtast estridpagels@proton.me, få en access key på mail
           2. Indsæt nøglen i value="…" i det skjulte felt nedenfor
-          Beskederne lander derefter direkte i hendes indbakke.
+          Beskederne lander derefter direkte i indbakken.
         -->
         <form class="form" action="https://api.web3forms.com/submit" method="POST">
-          <!-- ▼ INDSÆT DIN NØGLE FRA web3forms.com HER ▼ -->
+          <!-- ▼ INDSÆT NØGLEN FRA web3forms.com HER ▼ -->
           <input type="hidden" name="access_key" value="DIN-ACCESS-KEY">
           <input type="hidden" name="subject" value="Henvendelse fra estridpagels.dk">
           <input type="hidden" name="from_name" value="estridpagels.dk">
@@ -353,25 +68,10 @@ footer{border-top:1px solid var(--line); padding-top:64px; padding-bottom:56px}
               <label for="mail">Din e-mail</label>
               <input id="mail" name="email" type="email" required>
             </p>
-            <p class="field">
-              <label for="org">Organisation / virksomhed</label>
-              <input id="org" name="organisation" type="text">
-            </p>
-            <p class="field">
-              <label for="emne">Hvad handler det om?</label>
-              <select id="emne" name="emne">
-                <option>—</option>
-                <option>[Ydelse 1]</option>
-                <option>[Ydelse 2]</option>
-                <option>[Ydelse 3]</option>
-                <option>Andet</option>
-              </select>
-            </p>
           </div>
-          <p class="field field-wide">
-            <label for="besked">Beskriv kort hvad du søger</label>
-            <textarea id="besked" name="besked" rows="5"
-              placeholder="Fortæl om dit projekt eller spørgsmål – dato, format og evt. emne."></textarea>
+          <p class="field">
+            <label for="besked">Din besked</label>
+            <textarea id="besked" name="besked" rows="6" required></textarea>
           </p>
           <!-- Fælde for spam-robotter. Skjult for mennesker — lad den stå tom. -->
           <p class="honeypot" aria-hidden="true"><label>Website<input name="botcheck" type="checkbox" tabindex="-1"></label></p>
@@ -380,16 +80,11 @@ footer{border-top:1px solid var(--line); padding-top:64px; padding-bottom:56px}
         </form>
 
         <aside class="kontakt-aside">
-          <p class="alabel">E-mail:</p>
+          <p class="alabel">Eller skriv direkte</p>
           <p class="avalue">
+            <!-- Skrevet ud i ord, så robotter ikke opsamler adressen -->
             <a href="mailto:estridpagels@proton.me">estridpagels [snabel-a] proton [punktum] me</a>
           </p>
-          <hr class="rule rule-soft">
-          <p class="alabel">Sociale medier</p>
-          <ul class="alinks">
-            <li><a href="https://www.linkedin.com/in/…" target="_blank" rel="noopener">LinkedIn</a></li>
-            <li><a href="https://www.instagram.com/…" target="_blank" rel="noopener">Instagram</a></li>
-          </ul>
         </aside>
       </div>
     </div>
@@ -398,20 +93,8 @@ footer{border-top:1px solid var(--line); padding-top:64px; padding-bottom:56px}
 </main>
 
 <footer class="wrap">
-  <div class="foot-grid">
-    <div>
-      <p class="foot-name">Estrid Pagels</p>
-      <p class="foot-roles">[Titel 1] · [Titel 2] · [Titel 3]</p>
-    </div>
-    <ul class="foot-links">
-      <!-- Skrevet ud i ord, så robotter ikke opsamler adressen -->
-      <li><a href="mailto:estridpagels@proton.me">estridpagels [snabel-a] proton [punktum] me</a></li>
-      <li><a href="https://www.linkedin.com/in/…" target="_blank" rel="noopener">LinkedIn</a></li>
-      <li><a href="https://www.instagram.com/…" target="_blank" rel="noopener">Instagram</a></li>
-    </ul>
-  </div>
   <div class="foot-bottom">
-    <span>© <span id="aar">2026</span> Estrid Pagels · Alle rettigheder forbeholdes</span>
+    <span>© <span id="aar">2026</span> Estrid Pagels</span>
     <button class="theme-btn" id="theme">Skift lys / mørk</button>
   </div>
 </footer>
@@ -424,15 +107,11 @@ footer{border-top:1px solid var(--line); padding-top:64px; padding-bottom:56px}
     var p = new URLSearchParams(location.search), el = document.getElementById('status');
     if(!el) return;
     if(p.has('tak')){
-      el.textContent = 'Tak for din besked — jeg vender tilbage hurtigst muligt.';
+      el.textContent = 'Tak for din besked — jeg vender tilbage, når jeg kan.';
       el.className = 'besked-status ok'; el.hidden = false;
-    } else if(p.has('fejl')){
-      el.textContent = p.get('fejl') === '1'
-        ? 'Udfyld venligst navn, en gyldig e-mail og en besked.'
-        : 'Beskeden kunne ikke sendes. Skriv i stedet direkte til estridpagels@proton.me.';
-      el.className = 'besked-status fejl'; el.hidden = false;
     }
   })();
+
   var root = document.documentElement;
   document.getElementById('theme').addEventListener('click', function(){
     var now = root.getAttribute('data-theme');

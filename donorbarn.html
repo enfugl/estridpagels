@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="da">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Donorbarn — Estrid Pagels</title>
+<meta name="description" content="Donorbarn — en tekst af Estrid Pagels.">
+<meta property="og:title" content="Donorbarn">
+<meta property="og:description" content="En tekst af Estrid Pagels.">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://estridpagels.dk/donorbarn.html">
+<meta property="og:locale" content="da_DK">
+<!-- Ikke udgivet endnu — hold den ude af søgemaskiner indtil teksten er klar.
+     Slet linjen herunder, når siden skal kunne findes. -->
+<meta name="robots" content="noindex">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="stil.css">
+</head>
+<body>
+
+<header>
+  <nav class="wrap nav">
+    <a class="brand" href="/">Estrid Pagels</a>
+    <ul>
+      <li><a href="donorbarn.html" aria-current="page">Donorbarn</a></li>
+      <li><a href="/#kontakt">Kontakt</a></li>
+    </ul>
+  </nav>
+</header>
+
+<main id="top">
+
+  <div class="hero wrap">
+    <p class="status">Ikke udgivet endnu</p>
+    <h1>Donorbarn</h1>
+    <div class="tekst">
+      <p>
+        Teksten er ikke klar til udgivelse. Den kommer her, når den er det.
+      </p>
+      <p>
+        <!-- Skriv gerne et par linjer her om hvad Donorbarn er, når du er klar
+             til at fortælle om den. Indtil da står der bare det her. -->
+      </p>
+    </div>
+    <p style="margin-top:38px">
+      <a class="arrow" href="/#kontakt">Skriv til Estrid &rarr;</a>
+    </p>
+  </div>
+
+</main>
+
+<footer class="wrap">
+  <div class="foot-bottom">
+    <span>© <span id="aar">2026</span> Estrid Pagels</span>
+    <button class="theme-btn" id="theme">Skift lys / mørk</button>
+  </div>
+</footer>
+
+<script>
+  document.getElementById('aar').textContent = new Date().getFullYear();
+  var root = document.documentElement;
+  document.getElementById('theme').addEventListener('click', function(){
+    var now = root.getAttribute('data-theme');
+    if(!now){ now = matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light'; }
+    root.setAttribute('data-theme', now === 'dark' ? 'light' : 'dark');
+  });
+</script>
+</body>
+</html>
