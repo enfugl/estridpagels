@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="da">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Kontakt — Estrid Pagels</title>
+<meta name="description" content="Skriv til Estrid Pagels.">
+<meta property="og:title" content="Kontakt Estrid Pagels">
+<meta property="og:description" content="Skriv til Estrid Pagels.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://estridpagels.dk/kontakt.html">
+<meta property="og:locale" content="da_DK">
+<meta property="og:image" content="https://estridpagels.dk/billeder/deling.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32.png">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<link rel="stylesheet" href="stil.css">
+<script>try{var t=localStorage.getItem('tema');if(t)document.documentElement.setAttribute('data-theme',t)}catch(e){}</script>
+</head>
+<body>
+
+<header>
+  <nav class="wrap nav">
+    <a class="brand" href="/">Estrid Pagels</a>
+    <ul>
+      <li><a href="donorbarn.html">Donorbarn</a></li>
+      <li><a href="kontakt.html" aria-current="page">Kontakt</a></li>
+    </ul>
+  </nav>
+</header>
+
+<main id="top">
+  <div class="side wrap">
+    <h1>Kontakt</h1>
+    <p class="lead lead-bred">Skriv endelig — jeg vender tilbage, når jeg kan.</p>
+
+    <div class="kontakt-grid">
+      <!--
+        Formularen sender via Web3Forms — gratis, og kræver ingen server.
+        Nøglen nedenfor er offentlig efter Web3Forms' eget design og må
+        gerne stå i koden. Beskederne lander i estridpagels@proton.me.
+      -->
+      <form class="form" action="https://api.web3forms.com/submit" method="POST">
+        <input type="hidden" name="access_key" value="30df1ebd-f6f9-495d-aab7-e212a73c1194">
+        <input type="hidden" name="subject" value="Henvendelse fra estridpagels.dk">
+        <input type="hidden" name="from_name" value="estridpagels.dk">
+        <input type="hidden" name="redirect" value="https://estridpagels.dk/kontakt.html?tak=1">
+
+        <p class="field">
+          <label for="navn">Dit navn</label>
+          <input id="navn" name="name" type="text" required autocomplete="name">
+        </p>
+        <p class="field">
+          <label for="mail">Din e-mail</label>
+          <input id="mail" name="email" type="email" required autocomplete="email">
+        </p>
+        <p class="field">
+          <label for="besked">Din besked</label>
+          <textarea id="besked" name="message" rows="7" required></textarea>
+        </p>
+        <!-- Fælde for spam-robotter. Skjult for mennesker — lad den stå tom. -->
+        <p class="honeypot" aria-hidden="true"><label>Website<input name="botcheck" type="checkbox" tabindex="-1"></label></p>
+        <button class="send" type="submit">Send besked</button>
+        <p class="besked-status" id="status" hidden></p>
+      </form>
+
+      <aside class="kontakt-aside">
+        <p class="alabel">Eller skriv direkte</p>
+        <p class="avalue">
+          <!-- Skrevet ud i ord, så robotter ikke opsamler adressen -->
+          <a href="mailto:estridpagels@proton.me">estridpagels [snabel-a] proton [punktum] me</a>
+        </p>
+        <p class="alabel alabel-2">Andre steder</p>
+        <p class="avalue">
+          <a href="https://www.linkedin.com/in/estrid-pagels/" target="_blank" rel="noopener">LinkedIn</a>
+        </p>
+      </aside>
+    </div>
+  </div>
+</main>
+
+<footer class="wrap">
+  <div class="foot-grid">
+    <div>
+      <p class="foot-name">Estrid Pagels</p>
+      <p class="foot-roles">Borger i Danmark</p>
+    </div>
+    <ul class="foot-links">
+      <li><a href="donorbarn.html">Donorbarn</a></li>
+      <li><a href="https://www.linkedin.com/in/estrid-pagels/" target="_blank" rel="noopener">LinkedIn</a></li>
+    </ul>
+  </div>
+  <div class="foot-bottom">
+    <span>© <span id="aar">2026</span> Estrid Pagels · Alle rettigheder forbeholdes</span>
+    <button class="theme-btn" id="tema">Skift lys / mørk</button>
+  </div>
+</footer>
+
+<script src="sider.js"></script>
+</body>
+</html>

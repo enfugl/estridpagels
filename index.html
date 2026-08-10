@@ -10,12 +10,16 @@
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://estridpagels.dk/">
 <meta property="og:locale" content="da_DK">
+<meta property="og:image" content="https://estridpagels.dk/billeder/deling.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
 
-<!-- Display-serif. Virker uden nettet også — falder tilbage til Georgia. -->
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@900&display=swap" rel="stylesheet">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32.png">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
 <link rel="stylesheet" href="stil.css">
+<!-- Sæt temaet før siden tegnes, så den ikke blinker i den forkerte farve -->
+<script>try{var t=localStorage.getItem('tema');if(t)document.documentElement.setAttribute('data-theme',t)}catch(e){}</script>
 </head>
 <body>
 
@@ -24,21 +28,18 @@
     <a class="brand" href="/">Estrid Pagels</a>
     <ul>
       <li><a href="donorbarn.html">Donorbarn</a></li>
-      <li><a href="#kontakt">Kontakt</a></li>
+      <li><a href="kontakt.html">Kontakt</a></li>
     </ul>
   </nav>
 </header>
 
 <main id="top">
-
-  <!-- ===================== FORSIDE ===================== -->
   <div class="hero wrap">
     <div class="hero-inner">
       <div class="hero-grid">
         <figure>
-          <img src="billeder/estrid.jpg" alt="Estrid Pagels">
-          <!-- Skriv fotografens navn her, eller slet linjen -->
-          <figcaption>&nbsp;</figcaption>
+          <img src="billeder/estrid.jpg" alt="Estrid Pagels"
+               width="1200" height="1600" fetchpriority="high">
         </figure>
         <div>
           <p class="eyebrow">Borger i Danmark</p>
@@ -54,56 +55,6 @@
       </div>
     </div>
   </div>
-
-  <!-- ===================== KONTAKT ===================== -->
-  <section class="kontakt" id="kontakt">
-    <div class="wrap">
-      <h2>Kontakt</h2>
-
-      <div class="kontakt-grid">
-        <!--
-          Formularen sender via Web3Forms — gratis, og kræver ingen server.
-          Sådan gør du:
-          1. Gå på web3forms.com, indtast estridpagels@proton.me, få en access key på mail
-          2. Indsæt nøglen i value="…" i det skjulte felt nedenfor
-          Beskederne lander derefter direkte i indbakken.
-        -->
-        <form class="form" action="https://api.web3forms.com/submit" method="POST">
-          <!-- ▼ INDSÆT NØGLEN FRA web3forms.com HER ▼ -->
-          <input type="hidden" name="access_key" value="DIN-ACCESS-KEY">
-          <input type="hidden" name="subject" value="Henvendelse fra estridpagels.dk">
-          <input type="hidden" name="from_name" value="estridpagels.dk">
-          <input type="hidden" name="redirect" value="https://estridpagels.dk/?tak=1">
-
-          <p class="field">
-            <label for="navn">Dit navn</label>
-            <input id="navn" name="navn" type="text" required>
-          </p>
-          <p class="field">
-            <label for="mail">Din e-mail</label>
-            <input id="mail" name="email" type="email" required>
-          </p>
-          <p class="field">
-            <label for="besked">Din besked</label>
-            <textarea id="besked" name="besked" rows="5" required></textarea>
-          </p>
-          <!-- Fælde for spam-robotter. Skjult for mennesker — lad den stå tom. -->
-          <p class="honeypot" aria-hidden="true"><label>Website<input name="botcheck" type="checkbox" tabindex="-1"></label></p>
-          <button class="send" type="submit">Send besked</button>
-          <p class="besked-status" id="status" hidden></p>
-        </form>
-
-        <aside class="kontakt-aside">
-          <p class="alabel">Eller skriv direkte</p>
-          <p class="avalue">
-            <!-- Skrevet ud i ord, så robotter ikke opsamler adressen -->
-            <a href="mailto:estridpagels@proton.me">estridpagels [snabel-a] proton [punktum] me</a>
-          </p>
-        </aside>
-      </div>
-    </div>
-  </section>
-
 </main>
 
 <footer class="wrap">
@@ -113,39 +64,16 @@
       <p class="foot-roles">Borger i Danmark</p>
     </div>
     <ul class="foot-links">
-      <!-- Skrevet ud i ord, så robotter ikke opsamler adressen -->
-      <li><a href="mailto:estridpagels@proton.me">estridpagels [snabel-a] proton [punktum] me</a></li>
-      <li><a href="donorbarn.html">Donorbarn</a></li>
-      <!-- Har Estrid profiler, kan de sættes ind her:
-      <li><a href="https://www.instagram.com/…" target="_blank" rel="noopener">Instagram</a></li>
-      -->
+      <li><a href="kontakt.html">Kontakt</a></li>
+      <li><a href="https://www.linkedin.com/in/estrid-pagels/" target="_blank" rel="noopener">LinkedIn</a></li>
     </ul>
   </div>
   <div class="foot-bottom">
     <span>© <span id="aar">2026</span> Estrid Pagels · Alle rettigheder forbeholdes</span>
-    <button class="theme-btn" id="theme">Skift lys / mørk</button>
+    <button class="theme-btn" id="tema">Skift lys / mørk</button>
   </div>
 </footer>
 
-<script>
-  document.getElementById('aar').textContent = new Date().getFullYear();
-
-  // Web3Forms sender retur hertil med ?tak=1
-  (function(){
-    var p = new URLSearchParams(location.search), el = document.getElementById('status');
-    if(!el) return;
-    if(p.has('tak')){
-      el.textContent = 'Tak for din besked — jeg vender tilbage, når jeg kan.';
-      el.hidden = false;
-    }
-  })();
-
-  var root = document.documentElement;
-  document.getElementById('theme').addEventListener('click', function(){
-    var now = root.getAttribute('data-theme');
-    if(!now){ now = matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light'; }
-    root.setAttribute('data-theme', now === 'dark' ? 'light' : 'dark');
-  });
-</script>
+<script src="sider.js"></script>
 </body>
 </html>

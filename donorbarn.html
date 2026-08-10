@@ -10,14 +10,18 @@
 <meta property="og:type" content="article">
 <meta property="og:url" content="https://estridpagels.dk/donorbarn.html">
 <meta property="og:locale" content="da_DK">
+<meta property="og:image" content="https://estridpagels.dk/billeder/deling.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
 <!-- Ikke udgivet endnu — hold siden ude af søgemaskiner, indtil teksten er klar.
      Slet linjen herunder, når den skal kunne findes. -->
 <meta name="robots" content="noindex">
 
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@900&display=swap" rel="stylesheet">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32.png">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
 <link rel="stylesheet" href="stil.css">
+<script>try{var t=localStorage.getItem('tema');if(t)document.documentElement.setAttribute('data-theme',t)}catch(e){}</script>
 </head>
 <body>
 
@@ -26,13 +30,12 @@
     <a class="brand" href="/">Estrid Pagels</a>
     <ul>
       <li><a href="donorbarn.html" aria-current="page">Donorbarn</a></li>
-      <li><a href="/#kontakt">Kontakt</a></li>
+      <li><a href="kontakt.html">Kontakt</a></li>
     </ul>
   </nav>
 </header>
 
 <main id="top">
-
   <div class="side wrap">
     <p class="status">Ikke udgivet endnu</p>
     <h1>Donorbarn</h1>
@@ -43,11 +46,10 @@
       <!-- Skriv gerne et par linjer om Donorbarn her, når du er klar til at
            fortælle om den. Indtil da står der bare det ovenfor. -->
       <p>
-        <a class="arrow" href="/#kontakt">Skriv til Estrid &rarr;</a>
+        <a class="arrow" href="kontakt.html">Skriv til Estrid &rarr;</a>
       </p>
     </div>
   </div>
-
 </main>
 
 <footer class="wrap">
@@ -57,25 +59,16 @@
       <p class="foot-roles">Borger i Danmark</p>
     </div>
     <ul class="foot-links">
-      <!-- Skrevet ud i ord, så robotter ikke opsamler adressen -->
-      <li><a href="mailto:estridpagels@proton.me">estridpagels [snabel-a] proton [punktum] me</a></li>
-      <li><a href="/">Forside</a></li>
+      <li><a href="kontakt.html">Kontakt</a></li>
+      <li><a href="https://www.linkedin.com/in/estrid-pagels/" target="_blank" rel="noopener">LinkedIn</a></li>
     </ul>
   </div>
   <div class="foot-bottom">
     <span>© <span id="aar">2026</span> Estrid Pagels · Alle rettigheder forbeholdes</span>
-    <button class="theme-btn" id="theme">Skift lys / mørk</button>
+    <button class="theme-btn" id="tema">Skift lys / mørk</button>
   </div>
 </footer>
 
-<script>
-  document.getElementById('aar').textContent = new Date().getFullYear();
-  var root = document.documentElement;
-  document.getElementById('theme').addEventListener('click', function(){
-    var now = root.getAttribute('data-theme');
-    if(!now){ now = matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light'; }
-    root.setAttribute('data-theme', now === 'dark' ? 'light' : 'dark');
-  });
-</script>
+<script src="sider.js"></script>
 </body>
 </html>
