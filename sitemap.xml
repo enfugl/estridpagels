@@ -1,14 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!-- Fortæller søgemaskiner hvilke sider der findes.
-     Tilføj laes.html her, når teksten offentliggøres. -->
+     Tilføj nye sider her, efterhånden som de kommer til. -->
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://estridpagels.dk/</loc>
     <priority>1.0</priority>
-  </url>
-  <url>
-    <loc>https://estridpagels.dk/donorbarn.html</loc>
-    <priority>0.8</priority>
   </url>
   <url>
     <loc>https://estridpagels.dk/kontakt.html</loc>
