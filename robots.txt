@@ -1,0 +1,40 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://estridpagels.dk/sitemap.xml
+
+# Forbehold mod tekst- og datamining, jf. ophavsretslovens § 11 b.
+# Teksterne på dette websted må ikke bruges til træning eller udvikling
+# af systemer til kunstig intelligens. Se https://estridpagels.dk/brug-af-teksten.html
+# Bemærk: dette er et signal, ikke en spærring — de fleste robotter respekterer
+# det frivilligt, men det kan ikke håndhæves teknisk.
+
+User-agent: GPTBot
+Disallow: /
+
+User-agent: ClaudeBot
+Disallow: /
+
+User-agent: anthropic-ai
+Disallow: /
+
+User-agent: Google-Extended
+Disallow: /
+
+User-agent: CCBot
+Disallow: /
+
+User-agent: Applebot-Extended
+Disallow: /
+
+User-agent: Bytespider
+Disallow: /
+
+User-agent: PerplexityBot
+Disallow: /
+
+User-agent: Meta-ExternalAgent
+Disallow: /
+
+User-agent: cohere-ai
+Disallow: /
