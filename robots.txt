@@ -6,8 +6,10 @@ Sitemap: https://estridpagels.dk/sitemap.xml
 # Forbehold mod tekst- og datamining, jf. ophavsretslovens § 11 b.
 # Teksterne på dette websted må ikke bruges til træning eller udvikling
 # af systemer til kunstig intelligens. Se https://estridpagels.dk/brug-af-teksten.html
-# Bemærk: dette er et signal, ikke en spærring — de fleste robotter respekterer
-# det frivilligt, men det kan ikke håndhæves teknisk.
+# Bemærk: dette er et signal, ikke en spærring. De fleste robotter respekterer
+# det frivilligt, men det kan ikke håndhæves teknisk, og brugerudløste hentninger
+# (ChatGPT-User, Claude-User, Perplexity-User) rammes slet ikke af robots.txt.
+# Listen herunder dækker trænings-robotter. Sidst gennemgået 22. oktober 2026.
 
 User-agent: GPTBot
 Disallow: /
@@ -37,4 +39,16 @@ User-agent: Meta-ExternalAgent
 Disallow: /
 
 User-agent: cohere-ai
+Disallow: /
+
+User-agent: Amazonbot
+Disallow: /
+
+User-agent: Diffbot
+Disallow: /
+
+User-agent: Timpibot
+Disallow: /
+
+User-agent: Omgilibot
 Disallow: /
